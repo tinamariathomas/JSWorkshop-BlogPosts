@@ -1,9 +1,18 @@
 import React from 'react';
+import { Grid } from 'semantic-ui-react'
+import Posts from './posts';
+import Comments from './comments';
 
-class HelloWorld extends React.Component {
+export default class App extends React.Component {
   render() {
-    return (<div>Hello There</div>);
+    return (<Grid columns={2}>
+            <Grid.Column>
+              <Posts/>
+            </Grid.Column>
+
+            <Grid.Column>
+              <Comments/>
+            </Grid.Column>
+    </Grid>);
   }
 }
-
-export default HelloWorld;
