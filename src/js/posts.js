@@ -22,7 +22,11 @@ export default class Posts extends React.Component {
     <div>
       <h1>Posts</h1>
       {this.state.posts
-        .map(post => <Card header={post.title}></Card>)}
+        .map(post =>
+          <Card
+            header={post.title}
+            onClick={()=>this.props.onClick(post.id)}>
+          </Card>)}
     </div>
     );
   }
